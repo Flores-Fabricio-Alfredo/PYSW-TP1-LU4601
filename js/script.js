@@ -38,7 +38,7 @@ const counters = document.querySelectorAll('.counter-number');
 function animateCounter(counter) {
     const target = +counter.getAttribute('data-target');
     let count = 0;
-    const speed = 50; // Velocidad de la animación
+    const speed = 50; 
     const increment = target / speed;
 
     const updateCount = () => {
@@ -53,12 +53,18 @@ function animateCounter(counter) {
     updateCount();
 }
 
-counters.forEach(counter => {
-    counter.textContent = '0'; // Reinicia al cargar la página
-    counter.addEventListener('mouseenter', () => {
-        counter.textContent = '0'; // Reinicia al pasar el ratón
-        animateCounter(counter);
+const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            obs.unobserve(entry.target); // Anima solo una vez
+        }
     });
+}, { threshold: 0.5 });
+
+counters.forEach(counter => {
+    counter.textContent = '0'; 
+    observer.observe(counter);
 });
 
 // Manejo del formulario de contacto

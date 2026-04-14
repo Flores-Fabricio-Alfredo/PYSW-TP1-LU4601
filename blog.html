@@ -1,264 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFT Clubs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Blog - Turismo Jujuy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
-    <header> 
+    <header>
         <nav>
             <div class="envoltura">
-                <div class="logo"><a href="#">TFT CLUBS</a></div>
+                <div class="logo"><a href="index.html">JujuyTour</a></div>
                 <div class="menu-icon"><i class="bx bx-menu"></i></div>
                 <ul class="nav-links">
                     <li><a href="index.html">Inicio</a></li>
-                    <li>
-                        <a href="clase.html">Clases</a>
-                        <div class="mega-menu">
-                            <div class="contenedor">
-                                <div class="menu">
-                                    <p>Fuerza</p>
-                                    <ul class="mega-links">
-                                        <li><a href="clase.html">Musculación</a></li>
-                                        <li><a href="clase.html">Powerlifting</a></li>
-                                        <li><a href="clase.html">Entrenadores</a></li>
-                                    </ul>
-                                </div>
-                                <div class="menu">
-                                    <p>Funcional</p>
-                                    <ul class="mega-links">
-                                        <li><a href="clase.html">Calistenia</a></li>
-                                        <li><a href="clase.html">CrossFit</a></li>
-                                    </ul>
-                                </div>
-                                <div class="menu">
-                                    <p>Bienestar</p>
-                                    <ul class="mega-links">
-                                        <li><a href="clase.html">Yoga</a></li>
-                                        <li><a href="clase.html">Pilates</a></li>
-                                        <li><a href="clase.html">Zumba</a></li>
-                                        <li><a href="clase.html">Spinning</a></li>
-                                    </ul>
-                                </div>
-                                <div class="menu">
-                                    <img src="img/logo.PNG" alt="LOGO TFT">
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="profe.html">Entrenadores</a></li>
+                    <li><a href="destino.html">Destinos</a></li>
+                    <li><a href="agencia.html">Agencias</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="subcripcion.html">Planes</a></li>
+                    <li><a href="subcripcion.html">Paquetes</a></li>
                     <li><a href="blog.html">Blog</a></li>
                 </ul>
-                <button class="toggle-btn"><i class="bx bx-sun" id="theme-icon"></i></button>
+                <button class="toggle-btn" aria-label="Cambiar Modo Claro/Oscuro"><i class="bx bx-sun"
+                        id="theme-icon"></i></button>
             </div>
         </nav>
     </header>
-    
 
-    <section class="blog">
-        <h2 class="section-title">Nuestro Blog</h2>
+    <section class="blog" style="padding-top: 120px;">
+        <h1 class="section-title">Novedades y Diarios de Viaje</h1>
+        <p style="text-align: center; margin-bottom: 30px; color:var(--text-color);">Conocé historias increíbles de
+            viajeros y consejos locales.</p>
+
+        <!-- Filtros de Categorías -->
         <div class="filter-container">
-            <input type="radio" name="tag" id="all" checked>
-            <input type="radio" name="tag" id="yoga">
-            <input type="radio" name="tag" id="fitness">
-            <input type="radio" name="tag" id="nutricion">
-            <input type="radio" name="tag" id="zumba">
-            <input type="radio" name="tag" id="musculacion">
-            <input type="radio" name="tag" id="calistenia">
+            <input type="radio" name="blog-filter" id="all" checked>
+            <input type="radio" name="blog-filter" id="cultura">
+            <input type="radio" name="blog-filter" id="naturaleza">
+            <input type="radio" name="blog-filter" id="gastronomia">
+            <input type="radio" name="blog-filter" id="aventura">
+
             <div class="filter-tags">
                 <label for="all">Todos</label>
-                <label for="yoga">Yoga</label>
-                <label for="fitness">Fitness</label>
-                <label for="nutricion">Nutrición</label>
-                <label for="zumba">Zumba</label>
-                <label for="musculacion">Musculación</label>
-                <label for="calistenia">Calistenia</label>
+                <label for="cultura">Cultura</label>
+                <label for="naturaleza">Naturaleza</label>
+                <label for="gastronomia">Gastronomía</label>
+                <label for="aventura">Aventura</label>
             </div>
-            <br><br><br><br>
-            <div class="blog-grid">
-                <article class="blog-post" data-tag="yoga">
-                    <img src="img/yoga2.jpeg" alt="Post 1">
+
+            <!-- Grilla del Blog -->
+            <div class="blog-grid" style="margin-top: 30px;">
+                <!-- Post 1 -->
+                <article class="blog-post" data-tag="cultura">
+                    <img src="img/carnaval6.jfif" alt="Carnaval Jujeño">
                     <div class="post-content">
-                        <span class="tag">Yoga</span>
-                        <h3>Los Beneficios del Yoga para la Mente</h3>
-                        <p>Descubre cómo el yoga puede ayudarte a reducir el estrés y mejorar tu bienestar mental.</p>
-                        <a href="#comments1" class="read-more">Leer más</a>
-                    </div>
-                    <div class="comments-section" id="comments1">
-                        <h4>Comentarios</h4>
-                        <div class="comment">
-                            <div class="avatar"></div>
-                            <div class="comment-content">
-                                <span class="comment-author">Ana Pérez</span>
-                                <p>¡Me encantó este artículo! El yoga ha cambiado mi vida.</p>
-                            </div>
-                        </div>
-                        <div class="comment">
-                            <div class="avatar"></div>
-                            <div class="comment-content">
-                                <span class="comment-author">Luis Gómez</span>
-                                <p>Gracias por los consejos, voy a probar estas técnicas.</p>
-                            </div>
-                        </div>
+                        <span class="tag">Cultura</span>
+                        <h3>El desentierro del diablo: Todo lo que debes saber</h3>
+                        <p>Descubrí la magia de nuestro carnaval de la Quebrada. Todo empieza el Sábado de
+                            desentierro...</p>
+                        <a href="#" class="read-more">Leer más &rarr;</a>
                     </div>
                 </article>
-                <article class="blog-post" data-tag="fitness">
-                    <img src="img/crossfit3.jpeg" alt="Post 2">
+
+                <!-- Post 2 -->
+                <article class="blog-post" data-tag="naturaleza">
+                    <img src="img/FH6.jpg" alt="Yungas">
                     <div class="post-content">
-                        <span class="tag">Fitness</span>
-                        <h3>Rutina de Entrenamiento para Principiantes</h3>
-                        <p>Una guía sencilla para empezar tu viaje en el fitness con ejercicios básicos.</p>
-                        <a href="#comments2" class="read-more">Leer más</a>
-                    </div>
-                    <div class="comments-section" id="comments2">
-                        <h4>Comentarios</h4>
-                        <div class="comment">
-                            <div class="avatar"></div>
-                            <div class="comment-content">
-                                <span class="comment-author">María López</span>
-                                <p>¡Perfecto para mí! Gracias por compartir.</p>
-                            </div>
-                        </div>
+                        <span class="tag">Naturaleza</span>
+                        <h3>Calilegua: El pulmón verde del norte</h3>
+                        <p>Una guía completa sobre qué llevar para adentrarte en el Parque Nacional de yungas y selva.
+                        </p>
+                        <a href="#" class="read-more">Leer más &rarr;</a>
                     </div>
                 </article>
-                <article class="blog-post" data-tag="nutricion">
-                    <img src="img/canastablog.jpeg" alt="Post 3">
+
+                <!-- Post 3 -->
+                <article class="blog-post" data-tag="gastronomia">
+                    <img src="img/religion4.jpg" alt="Empanadas">
                     <div class="post-content">
-                        <span class="tag">Nutrición</span>
-                        <h3>Alimentos para Mejorar tu Energía</h3>
-                        <p>Conoce los mejores alimentos para mantenerte activo durante el día.</p>
-                        <a href="#comments3" class="read-more">Leer más</a>
-                    </div>
-                    <div class="comments-section" id="comments3">
-                        <h4>Comentarios</h4>
-                        <div class="comment">
-                            <div class="avatar"></div>
-                            <div class="comment-content">
-                                <span class="comment-author">Carlos Ruiz</span>
-                                <p>Interesante, voy a incluir estos alimentos en mi dieta.</p>
-                            </div>
-                        </div>
+                        <span class="tag">Gastronomía</span>
+                        <h3>Ruta de la empanada jujeña</h3>
+                        <p>Te mostramos 5 lugares en San Salvador donde probarás las empanadas más ricas del norte.</p>
+                        <a href="#" class="read-more">Leer más &rarr;</a>
                     </div>
                 </article>
-                <article class="blog-post" data-tag="zumba">
-                    <img src="img/zumba1.jpeg" alt="Post 4">
+
+                <!-- Post 4 -->
+                <article class="blog-post" data-tag="aventura">
+                    <img src="img/FV11.jpg" alt="Caravana">
                     <div class="post-content">
-                        <span class="tag">Zumba</span>
-                        <h3>Por qué la Zumba es Perfecta para Divertirte</h3>
-                        <p>Descubre cómo la zumba combina ejercicio y diversión en una sola clase.</p>
-                        <a href="#comments4" class="read-more">Leer más</a>
-                    </div>
-                    <div class="comments-section" id="comments4">
-                        <h4>Comentarios</h4>
-                        <div class="comment">
-                            <div class="avatar"></div>
-                            <div class="comment-content">
-                                <span class="comment-author">Sofía Martínez</span>
-                                <p>¡Amo la zumba! Este artículo me motivó aún más.</p>
-                            </div>
-                        </div>
+                        <span class="tag">Aventura</span>
+                        <h3>Trekking con Llamas a las Salinas</h3>
+                        <p>Descendí a los salares con una auténtica caravana de llamas liderada por guías expertos.</p>
+                        <a href="#" class="read-more">Leer más &rarr;</a>
                     </div>
                 </article>
-                <article class="blog-post" data-tag="musculacion">
-                    <img src="img/musculacion2.jpeg" alt="Post 5">
+
+                <!-- Post 5 -->
+                <article class="blog-post" data-tag="aventura">
+                    <img src="img/p1.jpg" alt="Hornocal">
                     <div class="post-content">
-                        <span class="tag">Musculación</span>
-                        <h3>Guía de Musculación para Ganar Masa</h3>
-                        <p>Consejos prácticos para aumentar tu masa muscular de forma efectiva.</p>
-                        <a href="#comments5" class="read-more">Leer más</a>
-                    </div>
-                    <div class="comments-section" id="comments5">
-                        <h4>Comentarios</h4>
-                        <div class="comment">
-                            <div class="avatar"></div>
-                            <div class="comment-content">
-                                <span class="comment-author">Pedro Sánchez</span>
-                                <p>Muy útil, gracias por los tips de entrenamiento.</p>
-                            </div>
-                        </div>
+                        <span class="tag">Aventura</span>
+                        <h3>Descubriendo el Hornocal</h3>
+                        <p>Llegar a los 4300 metros para ver el cerro de 14 colores no es fácil, te contamos cómo prepararte.</p>
+                        <a href="#" class="read-more">Leer más &rarr;</a>
                     </div>
                 </article>
-                <article class="blog-post" data-tag="calistenia">
-                    <img src="img/calistenia3.jpeg" alt="Post 6">
+
+                <!-- Post 6 -->
+                <article class="blog-post" data-tag="naturaleza">
+                    <img src="img/p8.jpg" alt="Dique">
                     <div class="post-content">
-                        <span class="tag">Calistenia</span>
-                        <h3>Entrenamiento de Calistenia para Todos</h3>
-                        <p>Aprende cómo empezar con la calistenia y sus beneficios para el cuerpo.</p>
-                        <a href="#comments6" class="read-more">Leer más</a>
+                        <span class="tag">Naturaleza</span>
+                        <h3>Tardes de relax en los Diques</h3>
+                        <p>Los espejos de agua de El Carmen son ideales para desconectar y practicar pesca deportiva turística.</p>
+                        <a href="#" class="read-more">Leer más &rarr;</a>
                     </div>
-                    <div class="comments-section" id="comments6">
-                        <h4>Comentarios</h4>
-                        <div class="comment">
-                            <div class="avatar"></div>
-                            <div class="comment-content">
-                                <span class="comment-author">Laura Díaz</span>
-                                <p>¡Increíble! La calistenia es justo lo que buscaba.</p>
-                            </div>
-                        </div>
+                </article>
+
+                <!-- Post 7 -->
+                <article class="blog-post" data-tag="cultura">
+                    <img src="img/carnaval1.jfif" alt="Comparsas">
+                    <div class="post-content">
+                        <span class="tag">Cultura</span>
+                        <h3>Vivir una comparsa desde adentro</h3>
+                        <p>Te mostramos el trabajo artesanal de los trajes y la energía de las murgas en San Pedro.</p>
+                        <a href="#" class="read-more">Leer más &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Post 8 -->
+                <article class="blog-post" data-tag="cultura">
+                    <img src="img/religion5.jpg" alt="Iglesia Uquía">
+                    <div class="post-content">
+                        <span class="tag">Cultura</span>
+                        <h3>Tesoros escondidos de Uquía</h3>
+                        <p>Hablamos sobre los Ángeles Arcabuceros, una de las joyas de la pintura cuzqueña en el norte.</p>
+                        <a href="#" class="read-more">Leer más &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Post 9 -->
+                <article class="blog-post" data-tag="aventura">
+                    <img src="img/c8.jpg" alt="Llamas en Puna">
+                    <div class="post-content">
+                        <span class="tag">Aventura</span>
+                        <h3>Guía definitiva: Trekking con Llamas</h3>
+                        <p>Una experiencia única de ecoturismo sustentable para sentir la montaña a otro ritmo local.</p>
+                        <a href="#" class="read-more">Leer más &rarr;</a>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!--footer-->
+    <!-- Comentarios de la comunidad con CSS Avatares -->
+    <section class="comments-section" style="max-width: 1200px; margin: 0 auto 50px;">
+        <h4>Comentarios Recientes de la Comunidad</h4>
 
-    <footer class="footer">
-        <div class="footer-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019003596282!2d-122.41941568468144!3d37.77492977975935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808f5d7e3f6b%3A0x6e9e8e5e5e5e5e5e!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1631234567890" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-        <div class="footer-content">
-          <div class="footer-section">
-            <h3>Categorías</h3>
-            <ul>
-              <li><a href="clase.html">Clases</a></li>
-              <li><a href="profe.html">Entrenadores</a></li>
-              <li><a href="subcripcion.html">Precios</a></li>
-              <li><a href="index.html">Testimonios</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Clases</h3>
-            <ul>
-              <li><a href="clase.html">Musculación</a></li>
-              <li><a href="clase.html">CrossFit</a></li>
-              <li><a href="clase.html">Yoga</a></li>
-              <li><a href="clase.html">Spinning</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Contacto</h3>
-            <p>Email: info@gimnasio.com</p>
-            <p>Teléfono: +54 388 4567890</p>
-            <p>Dirección: 123 Calle Fitness, Ciudad</p>
-          </div>
-          <div class="footer-section">
-            <h3>Suscribete</h3>
-            <p>Suscríbete para recibir noticias y ofertas.</p>
-            <form class="newsletter-form">
-              <input type="email" placeholder="Tu email" required>
-              <button type="submit">Suscribirse</button>
-            </form>
-            <h3>Síguenos</h3>
-            <div class="social-links">
-              <a href="https://facebook.com" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
-              <a href="https://instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
-              <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
-              <a href="https://twitter.com" target="_blank"><i class='bx bxl-spotify'></i></a>
+        <div class="comment">
+            <div class="avatar" style="background: linear-gradient(45deg, #e65100, #ff9800);"></div>
+            <div class="comment-content">
+                <span class="comment-author">Laura Viajera</span>
+                <p>Excelente artículo sobre el carnaval. ¡Acabo de sacar pasajes para el año próximo!</p>
             </div>
-          </div>
         </div>
+
+        <div class="comment">
+            <div class="avatar" style="background: linear-gradient(45deg, #27ae60, #2ecc71);"></div>
+            <div class="comment-content">
+                <span class="comment-author">Marcos C.</span>
+                <p>Para la ruta de la empanada, agregen "El Hornito de Don Juan", son espectaculares.</p>
+            </div>
+        </div>
+
+        <div class="comment">
+            <div class="avatar" style="background: linear-gradient(45deg, #8e44ad, #9b59b6);"></div>
+            <div class="comment-content">
+                <span class="comment-author">Tomas de Córdoba</span>
+                <p>Muy buena info sobre el Hornocal. Sugiero llevar un té de coca bien caliente en un termo para el apunamiento.</p>
+            </div>
+        </div>
+
+        <div class="comment">
+            <div class="avatar" style="background: linear-gradient(45deg, #e74c3c, #c0392b);"></div>
+            <div class="comment-content">
+                <span class="comment-author">Sofía López</span>
+                <p>¿Tienen agencias recomendadas para la caravana de llamas? Me encantaría llevar a mis hijos el próximo julio.</p>
+            </div>
+        </div>
+
+        <div class="comment">
+            <div class="avatar" style="background: linear-gradient(45deg, #34495e, #2c3e50);"></div>
+            <div class="comment-content">
+                <span class="comment-author">Carlos G.</span>
+                <p>Uquía es hermoso y re tranquilo. Hay un par de lugares gastronómicos detrás de la iglesia que valen oro.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Columna Mapa -->
+            <div class="footer-column footer-map">
+                <h3>Nuestra Ubicación</h3>
+                <!-- Mapa de la plaza Belgrano en Jujuy por defecto -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14552.016335198424!2d-65.31139455!3d-24.193003650000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f44bc191aab%3A0x6bfa5cc1fa7d82cc!2sPlaza%20Belgrano!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+
+            <!-- Columna Contacto -->
+            <div class="footer-column footer-contact">
+                <h3>Contáctanos</h3>
+                <p><i class="fas fa-phone-alt"></i> +54 388 422 1234</p>
+                <p><i class="fas fa-envelope"></i> consultas@jujuytour.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> San Martín 200, S.S. de Jujuy</p>
+            </div>
+
+            <!-- Columna Redes Sociales -->
+            <div class="footer-column footer-social">
+                <h3>Síguenos</h3>
+                <p>Mantenete al día con los próximos eventos y mejores fechas para visitarnos.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Columna Newsletter -->
+            <div class="footer-column footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Suscribite a nuestras promociones de viajes e información clave.</p>
+                <form action="#" class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required aria-label="Correo de suscripción">
+                    <button type="submit" aria-label="Suscribirse"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+
         <div class="footer-bottom">
-          <p>© 2025. Todos los derechos reservados.</p>
+            <p>&copy; 2026 JujuyTour. Todos los derechos reservados. Desarrollado para vivir Jujuy.</p>
         </div>
-      </footer>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

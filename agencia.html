@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencias de Turismo - Jujuy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="envoltura">
+                <div class="logo"><a href="index.html">JujuyTour</a></div>
+                <div class="menu-icon"><i class="bx bx-menu"></i></div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li>
+                        <a href="destino.html">Destinos</a>
+                        <div class="mega-menu">
+                            <div class="contenedor">
+                                <div class="menu">
+                                    <p>Valles</p>
+                                    <ul class="mega-links">
+                                        <li><a href="destino.html">San Salvador</a></li>
+                                        <li><a href="destino.html">Yala</a></li>
+                                        <li><a href="destino.html">Termas de Reyes</a></li>
+                                        <li><a href="destino.html">El Carmen</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu">
+                                    <p>Quebrada</p>
+                                    <ul class="mega-links">
+                                        <li><a href="destino.html">Purmamarca</a></li>
+                                        <li><a href="destino.html">Maimará</a></li>
+                                        <li><a href="destino.html">Tilcara</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu">
+                                    <p>Otras Regiones</p>
+                                    <ul class="mega-links">
+                                        <li><a href="destino.html">Yungas (Calilegua)</a></li>
+                                        <li><a href="destino.html">Puna (Salinas Grandes)</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu">
+                                    <img src="img/carnaval1.jfif" alt="Carnaval Jujuy">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="agencia.html">Agencias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="subcripcion.html">Paquetes</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <button class="toggle-btn" aria-label="Cambiar Modo Claro/Oscuro"><i class="bx bx-sun"
+                        id="theme-icon"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="entenadores">
+        <h1 class="section-title">Nuestras Agencias y Guías Asociados</h1>
+        <p style="margin-bottom:40px; color:var(--card-text);">Descubrí las mejores agencias y guías de Jujuy</p>
+        <div class="cards-container">
+            <!-- Agencia 1 -->
+            <div class="card-entrenador">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img class="entrenador" src="img/c8.jpg" alt="Agencia Norte">
+                        <h3>Norte Andino Tours</h3>
+                        <p>Especialistas en Quebrada y Puna</p>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-content">
+                            <h3>Norte Andino Tours</h3>
+                            <p>Te llevamos a los rincones más profundos y auténticos de Jujuy con guías locales
+                                certificados.</p>
+
+                            <div class="skills">
+                                <div class="skill">
+                                    <span>Puntualidad</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="animation-delay: 0.1s; width: 95%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span>Hospitalidad</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="animation-delay: 0.3s; width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rating star-rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+
+                            <div class="contact-info">
+                                <p><i class="fas fa-phone"></i> +54 388 111 2222</p>
+                                <p><i class="fas fa-envelope"></i> norteandino@tours.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agencia 2 -->
+            <div class="card-entrenador">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img class="entrenador" src="img/p2.jpg" alt="EcoYungas">
+                        <h3>EcoYungas Aventura</h3>
+                        <p>Trekking y Naturaleza</p>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-content">
+                            <h3>EcoYungas Aventura</h3>
+                            <p>Vive la selva como nunca antes. Especialistas en avistaje de aves y senderismo de alta
+                                dificultad.</p>
+
+                            <div class="skills">
+                                <div class="skill">
+                                    <span>Aventura Extrema</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="animation-delay: 0.2s; width: 90%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span>Ecoturismo</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="animation-delay: 0.4s; width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rating star-rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span class="empty">★</span>
+                            </div>
+
+                            <div class="contact-info">
+                                <p><i class="fas fa-phone"></i> +54 388 333 4444</p>
+                                <p><i class="fas fa-envelope"></i> reservas@ecoyungas.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agencia 3 -->
+            <div class="card-entrenador">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img class="entrenador" src="img/FH1.jpg" alt="Color Jujuy">
+                        <h3>Color Jujuy Excursiones</h3>
+                        <p>Turismo Convencional y Familiar</p>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-content">
+                            <h3>Color Jujuy Excursiones</h3>
+                            <p>Paseos tranquilos, cómodos y diseñados para toda la familia. Flota de minubuses modernos.
+                            </p>
+
+                            <div class="skills">
+                                <div class="skill">
+                                    <span>Comodidad Vehicular</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="animation-delay: 0.3s; width: 100%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span>Atención a Niños</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="animation-delay: 0.5s; width: 85%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rating star-rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+
+                            <div class="contact-info">
+                                <p><i class="fas fa-phone"></i> +54 388 555 6666</p>
+                                <p><i class="fas fa-envelope"></i> contacto@colorjujuy.ar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agencia 4 -->
+            <div class="card-entrenador">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img class="entrenador" src="img/carnaval5.jfif" alt="Carnaval Tours">
+                        <h3>Carnaval Tours</h3>
+                        <p>Fiestas tradicionales y Eventos</p>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-content">
+                            <h3>Carnaval Tours</h3>
+                            <p>Tu entrada directa a peñas, festivales andinos y eventos locales.</p>
+                            <div class="skills">
+                                <div class="skill"><span>Entretenimiento</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skill"><span>Cultura Local</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rating star-rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <div class="contact-info">
+                                <p><i class="fas fa-phone"></i> +54 388 777 8888</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agencia 5 -->
+            <div class="card-entrenador">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img class="entrenador" src="img/religion5.jpg" alt="Ruta Blanca">
+                        <h3>Ruta Blanca Safaris</h3>
+                        <p>Excursiones Exclusivas</p>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-content">
+                            <h3>Ruta Blanca</h3>
+                            <p>Excursiones 4x4 por la Puna profunda y estancias históricas de Jujuy.</p>
+                            <div class="skills">
+                                <div class="skill"><span>Seguridad 4x4</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skill"><span>Guías Bilingües</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rating star-rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <div class="contact-info">
+                                <p><i class="fas fa-phone"></i> +54 388 999 0000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agencia 6 -->
+            <div class="card-entrenador">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img class="entrenador" src="img/FH6.jpg" alt="Pachamama Trips">
+                        <h3>Pachamama Trips</h3>
+                        <p>Multidestino Jujuy</p>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-content">
+                            <h3>Pachamama Trips</h3>
+                            <p>Soluciones a medida para viajes grupales, corporativos y de egresados.</p>
+                            <div class="skills">
+                                <div class="skill"><span>Logística</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skill"><span>Precios</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rating star-rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span class="empty">★</span>
+                            </div>
+                            <div class="contact-info">
+                                <p><i class="fas fa-phone"></i> +54 388 123 4567</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Agencia 7 -->
+            <div class="card-entrenador">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img class="entrenador" src="img/carnaval6.jfif" alt="Carnaval Jujeño Trips">
+                        <h3>Horizonte Jujeño</h3>
+                        <p>Turismo Sustentable</p>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-content">
+                            <h3>Horizonte Jujeño</h3>
+                            <p>Organizamos experiencias respetando a las comunidades y su cosmovisión.</p>
+                            <div class="skills">
+                                <div class="skill"><span>Ecoturismo</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skill"><span>Atención</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rating star-rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                            <div class="contact-info">
+                                <p><i class="fas fa-phone"></i> +54 388 444 5555</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agencia 8 -->
+            <div class="card-entrenador">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img class="entrenador" src="img/FV10.jpg" alt="Montañismo Tours">
+                        <h3>Cumbres Tours</h3>
+                        <p>Trekking de Montaña</p>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-content">
+                            <h3>Cumbres Tours</h3>
+                            <p>Te llevamos a las alturas de forma segura con guías experimentados.</p>
+                            <div class="skills">
+                                <div class="skill"><span>Seguridad</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                                <div class="skill"><span>Equipo Incluido</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 85%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rating star-rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span class="empty">★</span>
+                            </div>
+                            <div class="contact-info">
+                                <p><i class="fas fa-phone"></i> +54 388 666 7777</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Columna Mapa -->
+            <div class="footer-column footer-map">
+                <h3>Nuestra Ubicación</h3>
+                <!-- Mapa de la plaza Belgrano en Jujuy -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14552.016335198424!2d-65.31139455!3d-24.193003650000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f44bc191aab%3A0x6bfa5cc1fa7d82cc!2sPlaza%20Belgrano!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+
+            <!-- Columna Contacto -->
+            <div class="footer-column footer-contact">
+                <h3>Contáctanos</h3>
+                <p><i class="fas fa-phone-alt"></i> +54 388 422 1234</p>
+                <p><i class="fas fa-envelope"></i> consultas@jujuytour.com</p>
+            </div>
+
+            <!-- Columna Redes Sociales -->
+            <div class="footer-column footer-social">
+                <h3>Síguenos</h3>
+                <p>Mantenete al día con los próximos eventos.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Columna Newsletter -->
+            <div class="footer-column footer-newsletter">
+                <h3>Newsletter</h3>
+                <form action="#" class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required aria-label="Correo de suscripción">
+                    <button type="submit" aria-label="Suscribirse"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 JujuyTour. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

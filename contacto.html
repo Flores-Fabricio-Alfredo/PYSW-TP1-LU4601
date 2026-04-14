@@ -1,157 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFT Clubs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Contacto - Turismo Jujuy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
-    <header> 
+    <header>
         <nav>
             <div class="envoltura">
-                <div class="logo"><a href="#">TFT CLUBS</a></div>
+                <div class="logo"><a href="index.html">JujuyTour</a></div>
                 <div class="menu-icon"><i class="bx bx-menu"></i></div>
                 <ul class="nav-links">
                     <li><a href="index.html">Inicio</a></li>
                     <li>
-                        <a href="clase.html">Clases</a>
-                        <div class="mega-menu">
-                            <div class="contenedor">
-                                <div class="menu">
-                                    <p>Fuerza</p>
-                                    <ul class="mega-links">
-                                        <li><a href="clase.html">Musculación</a></li>
-                                        <li><a href="clase.html">Powerlifting</a></li>
-                                        <li><a href="clase.html">Entrenadores</a></li>
-                                    </ul>
-                                </div>
-                                <div class="menu">
-                                    <p>Funcional</p>
-                                    <ul class="mega-links">
-                                        <li><a href="clase.html">Calistenia</a></li>
-                                        <li><a href="clase.html">CrossFit</a></li>
-                                    </ul>
-                                </div>
-                                <div class="menu">
-                                    <p>Bienestar</p>
-                                    <ul class="mega-links">
-                                        <li><a href="clase.html">Yoga</a></li>
-                                        <li><a href="clase.html">Pilates</a></li>
-                                        <li><a href="clase.html">Zumba</a></li>
-                                        <li><a href="clase.html">Spinning</a></li>
-                                    </ul>
-                                </div>
-                                <div class="menu">
-                                    <img src="img/logo.PNG" alt="LOGO TFT">
-                                </div>
-                            </div>
-                        </div>
+                        <a href="destino.html">Destinos</a>
+                        <!-- El Mega Menú ya se asume incluido o el CSS lo maneja, por simplicidad omitimos aquí el bloque largo si es solo enlace a destinos en móvil -->
                     </li>
-                    <li><a href="profe.html">Entrenadores</a></li>
+                    <li><a href="agencia.html">Agencias</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="subcripcion.html">Planes</a></li>
+                    <li><a href="subcripcion.html">Paquetes</a></li>
                     <li><a href="blog.html">Blog</a></li>
                 </ul>
-                <button class="toggle-btn"><i class="bx bx-sun" id="theme-icon"></i></button>
+                <button class="toggle-btn" aria-label="Cambiar Modo Claro/Oscuro"><i class="bx bx-sun"
+                        id="theme-icon"></i></button>
             </div>
         </nav>
     </header>
-    <div>
-        <section class="contacto">
-            <h2 class="section-title">Contáctanos</h2>
-            <div class="contact-container">
-                <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nombre</label>
-                        <input type="text" id="name" name="name" required minlength="2">
-                        <span class="error-message">Por favor, ingresa un nombre válido (mínimo 2 caracteres).</span>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" required>
-                        <span class="error-message">Por favor, ingresa un correo electrónico válido.</span>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Teléfono</label>
-                        <input type="tel" id="phone" name="phone" pattern="[0-9]{9,12}" required>
-                        <span class="error-message">Por favor, ingresa un número de teléfono válido (9-12 dígitos).</span>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" required minlength="10"></textarea>
-                        <span class="error-message">El mensaje debe tener al menos 10 caracteres.</span>
-                    </div>
-                    <button type="submit" class="submit-btn">Enviar</button>
-                    <div class="spinner" style="display: none;"></div>
-                </form>
-            </div>
-        </section>
-    
-        <!-- Modal de confirmación -->
-        <div class="modal" id="success-modal">
-            <div class="modal-content">
-                <span class="close-btn">&times;</span>
-                <h3>¡Mensaje Enviado!</h3>
-                <p>Gracias por contactarnos. Te responderemos pronto.</p>
-            </div>
+
+    <section class="contacto" style="padding-top: 120px;">
+        <h1 class="section-title">Dejanos tu Consulta</h1>
+        <p style="margin-bottom: 30px; color:var(--text-color);">Completá el formulario para que nuestras agencias te
+            asesoren al instante.</p>
+
+        <div class="contact-container">
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required
+                        pattern="^[A-Za-zñÑáéíóúÁÉÍÓÚ\s]{3,}$">
+                    <span class="error-message">Ingresá un nombre válido (solo letras, mín. 3 caracteres).</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                    <span class="error-message">Ingresá un correo electrónico válido.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono (opcional)</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej. +54 388 1234567"
+                        pattern="^\+?[0-9\s]{8,}$">
+                    <span class="error-message">El teléfono debe contener solo números (mín. 8 dígitos).</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Consulta o Mensaje</label>
+                    <textarea id="mensaje" name="mensaje"
+                        placeholder="Escribí aquí tu mensaje o pedido de presupuesto..." required
+                        minlength="10"></textarea>
+                    <span class="error-message">El mensaje debe tener al menos 10 caracteres.</span>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submit-btn">Enviar Consulta</button>
+                <div class="spinner" id="spinner" style="display: none;"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Modal de confirmación CSS puro -->
+    <div class="modal" id="success-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <i class="bx bx-check-circle" style="font-size: 3rem; color: #27AE60; margin-bottom: 10px;"></i>
+            <h3>¡Mensaje Enviado!</h3>
+            <p>Nos contactaremos a la brevedad para organizar tu viaje a Jujuy.</p>
         </div>
     </div>
-    
-     <!--footer-->
 
-     <footer class="footer">
-        <div class="footer-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019003596282!2d-122.41941568468144!3d37.77492977975935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808f5d7e3f6b%3A0x6e9e8e5e5e5e5e5e!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1631234567890" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-        <div class="footer-content">
-          <div class="footer-section">
-            <h3>Categorías</h3>
-            <ul>
-              <li><a href="clase.html">Clases</a></li>
-              <li><a href="profe.html">Entrenadores</a></li>
-              <li><a href="subcripcion.html">Precios</a></li>
-              <li><a href="index.html">Testimonios</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Clases</h3>
-            <ul>
-              <li><a href="clase.html">Musculación</a></li>
-              <li><a href="clase.html">CrossFit</a></li>
-              <li><a href="clase.html">Yoga</a></li>
-              <li><a href="clase.html">Spinning</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Contacto</h3>
-            <p>Email: info@gimnasio.com</p>
-            <p>Teléfono: +54 388 4567890</p>
-            <p>Dirección: 123 Calle Fitness, Ciudad</p>
-          </div>
-          <div class="footer-section">
-            <h3>Suscribete</h3>
-            <p>Suscríbete para recibir noticias y ofertas.</p>
-            <form class="newsletter-form">
-              <input type="email" placeholder="Tu email" required>
-              <button type="submit">Suscribirse</button>
-            </form>
-            <h3>Síguenos</h3>
-            <div class="social-links">
-              <a href="https://facebook.com" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
-              <a href="https://instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
-              <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
-              <a href="https://twitter.com" target="_blank"><i class='bx bxl-spotify'></i></a>
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Columna Mapa -->
+            <div class="footer-column footer-map">
+                <h3>Nuestra Ubicación</h3>
+                <!-- Mapa de la plaza Belgrano en Jujuy por defecto -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14552.016335198424!2d-65.31139455!3d-24.193003650000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f44bc191aab%3A0x6bfa5cc1fa7d82cc!2sPlaza%20Belgrano!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+                    allowfullscreen="" loading="lazy">
+                </iframe>
             </div>
-          </div>
+
+            <!-- Columna Contacto -->
+            <div class="footer-column footer-contact">
+                <h3>Contáctanos</h3>
+                <p><i class="fas fa-phone-alt"></i> +54 388 422 1234</p>
+                <p><i class="fas fa-envelope"></i> consultas@jujuytour.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> San Martín 200, S.S. de Jujuy</p>
+            </div>
+
+            <!-- Columna Redes Sociales -->
+            <div class="footer-column footer-social">
+                <h3>Síguenos</h3>
+                <p>Mantenete al día con los próximos eventos y mejores fechas para visitarnos.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Columna Newsletter -->
+            <div class="footer-column footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Suscribite a nuestras promociones de viajes e información clave.</p>
+                <form action="#" class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required aria-label="Correo de suscripción">
+                    <button type="submit" aria-label="Suscribirse"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
         </div>
+
         <div class="footer-bottom">
-          <p>© 2025. Todos los derechos reservados.</p>
+            <p>&copy; 2026 JujuyTour. Todos los derechos reservados. Desarrollado para vivir Jujuy.</p>
         </div>
-      </footer>
+    </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        // Override Modal behavior para garantizar feedback
+        const form = document.getElementById('contact-form');
+        const spinnerUi = document.getElementById('spinner');
+        const btn = document.getElementById('submit-btn');
+        const modal = document.getElementById('success-modal');
+        const close = document.getElementById('close-modal');
+
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                spinnerUi.style.display = 'block';
+                btn.style.display = 'none';
+                setTimeout(() => {
+                    spinnerUi.style.display = 'none';
+                    btn.style.display = 'block';
+                    modal.style.display = 'flex';
+                    form.reset();
+                }, 1500);
+            });
+        }
+        if (close) {
+            close.addEventListener('click', () => modal.style.display = 'none');
+        }
+    </script>
 </body>
+
 </html>

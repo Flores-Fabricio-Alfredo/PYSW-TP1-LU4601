@@ -1,256 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFT Clubs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Turismo Jujuy - Explorá Nuestra Tierra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <header> 
         <nav>
             <div class="envoltura">
-                <div class="logo"><a href="#">TFT CLUBS</a></div>
+                <div class="logo"><a href="index.html">JujuyTour</a></div>
                 <div class="menu-icon"><i class="bx bx-menu"></i></div>
                 <ul class="nav-links">
                     <li><a href="index.html">Inicio</a></li>
                     <li>
-                        <a href="clase.html">Clases</a>
+                        <a href="destino.html">Destinos</a>
                         <div class="mega-menu">
                             <div class="contenedor">
                                 <div class="menu">
-                                    <p>Fuerza</p>
+                                    <p>Valles</p>
                                     <ul class="mega-links">
-                                        <li><a href="clase.html">Musculación</a></li>
-                                        <li><a href="clase.html">Powerlifting</a></li>
-                                        <li><a href="clase.html">Entrenadores</a></li>
+                                        <li><a href="destino.html">San Salvador</a></li>
+                                        <li><a href="destino.html">Yala</a></li>
+                                        <li><a href="destino.html">Termas de Reyes</a></li>
+                                        <li><a href="destino.html">El Carmen</a></li>
                                     </ul>
                                 </div>
                                 <div class="menu">
-                                    <p>Funcional</p>
+                                    <p>Quebrada</p>
                                     <ul class="mega-links">
-                                        <li><a href="clase.html">Calistenia</a></li>
-                                        <li><a href="clase.html">CrossFit</a></li>
+                                        <li><a href="destino.html">Purmamarca</a></li>
+                                        <li><a href="destino.html">Maimará</a></li>
+                                        <li><a href="destino.html">Tilcara</a></li>
+                                        <li><a href="destino.html">Humahuaca</a></li>
                                     </ul>
                                 </div>
                                 <div class="menu">
-                                    <p>Bienestar</p>
+                                    <p>Otras Regiones</p>
                                     <ul class="mega-links">
-                                        <li><a href="clase.html">Yoga</a></li>
-                                        <li><a href="clase.html">Pilates</a></li>
-                                        <li><a href="clase.html">Zumba</a></li>
-                                        <li><a href="clase.html">Spinning</a></li>
+                                        <li><a href="destino.html">Yungas (Calilegua)</a></li>
+                                        <li><a href="destino.html">Puna (Salinas Grandes)</a></li>
+                                        <li><a href="destino.html">Susques</a></li>
                                     </ul>
                                 </div>
                                 <div class="menu">
-                                    <img src="img/logo.PNG" alt="LOGO TFT">
+                                    <img src="img/carnaval1.jfif" alt="Carnaval Jujuy">
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li><a href="profe.html">Entrenadores</a></li>
+                    <li><a href="agencia.html">Agencias</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="subcripcion.html">Planes</a></li>
+                    <li><a href="subcripcion.html">Paquetes</a></li>
                     <li><a href="blog.html">Blog</a></li>
                 </ul>
-                <button class="toggle-btn"><i class="bx bx-sun" id="theme-icon"></i></button>
+                <button class="toggle-btn" aria-label="Cambiar Modo Claro/Oscuro"><i class="bx bx-sun" id="theme-icon"></i></button>
             </div>
         </nav>
     </header>
     
-    <!--videos-->
+    <!-- Hero Section -->
     <div>
         <section class="hero">
             <video autoplay loop muted playsinline>
-              <source src="img/precentacion.mp4" type="video/mp4">
+              <source src="img/video.mp4" type="video/mp4">
               Tu navegador no soporta videos.
             </video>
             <div class="hero-overlay">
-              <h1 class="hero-title">¡Transforma tu vida hoy!</h1>
-              <p class="hero-subtitle">Únete al mejor gimnasio de la ciudad</p>
-              <a href="#" class="hero-button">Comienza ahora</a>
+              <h1 class="hero-title anim-title">Explorá el Norte con Nosotros</h1>
+              <p class="hero-subtitle anim-subtitle">Descubrí montañas de colores, selvas vibrantes y cultura milenaria en Jujuy.</p>
+              <a href="destino.html" class="hero-button anim-btn">Ver Destinos</a>
             </div>
         </section>
     </div>
-    <!---clases---->
-    <div>
-        <section class="clases">
-            <h2 class="section-title">Clases Destacadas</h2>
-            <div class="cards-container">
-              <article class="card">
-                <img src="img/img1.jpeg" alt="Musculación">
-                <div class="card-content">
-                  <h3>Musculación</h3>
-                  <p>Fortalece tu cuerpo con entrenamientos personalizados.</p>
-                </div>
-              </article>
-              <article class="card">
-                <img src="img/img2.jpeg" alt="CrossFit">
-                <div class="card-content">
-                  <h3>CrossFit</h3>
-                  <p>Supera tus límites con alta intensidad.</p>
-                </div>
-              </article>
-              <article class="card">
-                <img src="img/yoga2.jpeg" alt="Yoga">
-                <div class="card-content">
-                  <h3>Yoga</h3>
-                  <p>Encuentra paz y flexibilidad en cada sesión.</p>
-                </div>
-              </article>
-              <article class="card">
-                <img src="img/img4.jpg" alt="Spinning">
-                <div class="card-content">
-                  <h3>Spinning</h3>
-                  <p>Quema calorías con sesiones dinámicas en bici.</p>
-                </div>
-              </article>
-              <article class="card">
-                <img src="img/pilates2.jpeg" alt="Pilates">
-                <div class="card-content">
-                  <h3>Pilates</h3>
-                  <p>Mejora tu postura y fuerza central.</p>
-                </div>
-              </article>
-              <article class="card">
-                <img src="img/Powerlifting.jpeg" alt="Powerlifting">
-                <div class="card-content">
-                  <h3>Powerlifting</h3>
-                  <p>No se trata solo de levantar peso, se trata de superarte.</p>
-                </div>
-              </article>
-              <article class="card">
-                <img src="img/calistenia3.jpeg" alt="Calistenia">
-                <div class="card-content">
-                  <h3>Calistenia</h3>
-                  <p>el arte de dominar tu propio peso.</p>
-                </div>
-              </article>
-              <article class="card">
-                <img src="img/zumba4.jpeg" alt="Zumba">
-                <div class="card-content">
-                  <h3>Zumba</h3>
-                  <p>Diviértete bailando mientras te ejercitas.</p>
-                </div>
-              </article>
 
+    <!-- Destinos Principales (Clip-path & Hover) -->
+    <div>
+        <section class="clases destructured-destinos">
+            <h2 class="section-title">Destinos Principales</h2>
+            <div class="cards-container clip-path-cards">
+              <article class="card dest-card">
+                <img src="img/p3.jpg" alt="Purmamarca">
+                <div class="card-content">
+                  <h3>Cerro de los 7 Colores</h3>
+                  <p>Un paisaje icónico ubicado en Purmamarca, ideal para tus mejores fotos.</p>
+                </div>
+              </article>
+              <article class="card dest-card">
+                <img src="img/FH8.jpg" alt="Salinas Grandes">
+                <div class="card-content">
+                  <h3>Salinas Grandes</h3>
+                  <p>El tercer salar más grande del mundo, una maravilla blanca interminable.</p>
+                </div>
+              </article>
+              <article class="card dest-card">
+                <img src="img/carnaval5.jfif" alt="Carnaval Humahuaca">
+                <div class="card-content">
+                  <h3>Cultura y Tradición</h3>
+                  <p>Viví el carnaval y nuestras costumbres con la alegría de nuestro pueblo.</p>
+                </div>
+              </article>
+              <article class="card dest-card">
+                <img src="img/FV12.jpg" alt="Hornocal">
+                <div class="card-content">
+                  <h3>Serranía del Hornocal</h3>
+                  <p>Un majestuoso cerro de 14 colores que te dejará sin aliento a 4300msnm.</p>
+                </div>
+              </article>
+              <article class="card dest-card">
+                <img src="img/religion5.jpg" alt="Iglesia de Uquía">
+                <div class="card-content">
+                  <h3>Turismo Religioso</h3>
+                  <p>Descubrí los ángeles arcabuceros y las iglesias históricas de la Quebrada.</p>
+                </div>
+              </article>
+              <article class="card dest-card">
+                <img src="img/FH10.jpg" alt="Parque Nacional Calilegua">
+                <div class="card-content">
+                  <h3>Parque Nacional Calilegua</h3>
+                  <p>Adentrate en las yungas y viví la diversidad plena de la selva nublada.</p>
+                </div>
+              </article>
+              <article class="card dest-card">
+                <img src="img/p5.jpg" alt="Pucará de Tilcara">
+                <div class="card-content">
+                  <h3>Pucará de Tilcara</h3>
+                  <p>Descubrí el yacimiento arqueológico más importante de la quebrada jujeña.</p>
+                </div>
+              </article>
+              <article class="card dest-card">
+                <img src="img/termas.jpg" alt="Termas de Reyes">
+                <div class="card-content">
+                  <h3>Termas de Reyes</h3>
+                  <p>Relajate en aguas termales curativas rodeadas por imponentes montañas verdes.</p>
+                </div>
+              </article>
             </div>
           </section>
     </div>
-    <!---entrenadores-->
     
-    <!--contadores-->
+    <!-- Contadores (CSS y Data anim) -->
     <div>
         <section class="counters">
-            <h2 class="section-title">Nuestros Números</h2>
+            <h2 class="section-title">Turismo en Cifras</h2>
             <div class="counter-container">
               <div class="counter-item">
-                <span class="counter-number" data-target="500">0</span>
-                <p>Clientes Satisfechos</p>
+                <span class="counter-number css-counter" data-target="850">0</span>
+                <p>Viajeros Felices</p>
               </div>
               <div class="counter-item">
-                <span class="counter-number" data-target="55">0</span>
-                <p>Entrenadores</p>
+                <span class="counter-number css-counter" data-target="45">0</span>
+                <p>Agencias Activas</p>
               </div>
               <div class="counter-item">
-                <span class="counter-number" data-target="35">0</span>
-                <p>Clases</p>
+                <span class="counter-number css-counter" data-target="150">0</span>
+                <p>Excursiones</p>
               </div>
               <div class="counter-item">
-                <span class="counter-number" data-target="7">0</span>
-                <p>Gimnasios</p>
+                <span class="counter-number css-counter" data-target="15">0</span>
+                <p>Pueblos Mágicos</p>
               </div>
             </div>
           </section>
     </div>
-    <!--testimonios-->
+
+    <!-- Testimonios CSS Snap Carousel -->
     <div>
         <section class="testimonios">
-            <h2 class="section-title">Testimonios</h2>
-            <div class="carousel">
-              <div class="carousel-inner">
-                <div class="testimonios-item">
-                  <img src="img/testimonio.jpeg" alt="Brian Peña">
-                  <p>"El mejor lugar para entrenar, los entrenadores son increíbles."</p>
+            <h2 class="section-title">Experiencias Inolvidables</h2>
+            <div class="carousel snap-carousel">
+              <div class="carousel-inner snap-inline">
+                
+                <div class="testimonios-item snap-item">
+                  <div class="css-avatar" style="--bg: #e65100">B</div>
+                  <p>"Subir al Hornocal fue la experiencia de mi vida. Vistas de locos."</p>
                   <span>- Brian Peña</span>
                 </div>
-                <div class="testimonios-item">
-                  <img src="img/testimomio2.jpeg" alt="María Gómez">
-                  <p>"He mejorado mi salud y confianza desde que empecé aquí."</p>
+                <div class="testimonios-item snap-item">
+                  <div class="css-avatar" style="--bg: #27ae60">M</div>
+                  <p>"Las empanadas jujeñas y el trato de la gente en Purmamarca son únicos."</p>
                   <span>- María Gómez</span>
                 </div>
-                <div class="testimonios-item">
-                  <img src="img/testimoni3.jpeg" alt="Irene Quiroga">
-                  <p>"Las clases de Yoga son mi escape favorito de la semana."</p>
+                <div class="testimonios-item snap-item">
+                  <div class="css-avatar" style="--bg: #8e44ad">I</div>
+                  <p>"Calilegua me sorprendió, ¡no sabía que Jujuy tenía tanta selva!"</p>
                   <span>- Irene Quiroga</span>
                 </div>
-                <div class="testimonios-item">
-                  <img src="img/testimonio4.jpeg" alt="Gabriel Iture">
-                  <p>"Spinning me ha cambiado la vida, ¡100% recomendado!"</p>
+                <div class="testimonios-item snap-item">
+                  <div class="css-avatar" style="--bg: #2980b9">G</div>
+                  <p>"Excelente sitio para contratar nuestras excursiones y paquetes seguros."</p>
                   <span>- Gabriel Iture</span>
                 </div>
-                <div class="testimonios-item">
-                  <img src="img/testimoni5.jpeg" alt="Maria Duu">
-                  <p>"Un ambiente motivador y profesional, no cambio este gym."</p>
+                <div class="testimonios-item snap-item">
+                  <div class="css-avatar" style="--bg: #e74c3c">M</div>
+                  <p>"Volveré al carnaval el próximo año sin ninguna duda. ¡Jujuy es hermoso!"</p>
                   <span>- Maria Duu</span>
                 </div>
+                
               </div>
             </div>
           </section>
     </div>
-    <!--footer-->
 
-    <footer class="footer">
-        <div class="footer-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019003596282!2d-122.41941568468144!3d37.77492977975935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808f5d7e3f6b%3A0x6e9e8e5e5e5e5e5e!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1631234567890" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-        <div class="footer-content">
-          <div class="footer-section">
-            <h3>Categorías</h3>
-            <ul>
-              <li><a href="clase.html">Clases</a></li>
-              <li><a href="profe.html">Entrenadores</a></li>
-              <li><a href="subcripcion.html">Precios</a></li>
-              <li><a href="index.html">Testimonios</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Clases</h3>
-            <ul>
-              <li><a href="clase.html">Musculación</a></li>
-              <li><a href="clase.html">CrossFit</a></li>
-              <li><a href="clase.html">Yoga</a></li>
-              <li><a href="clase.html">Spinning</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>Contacto</h3>
-            <p>Email: info@gimnasio.com</p>
-            <p>Teléfono: +54 388 4567890</p>
-            <p>Dirección: 123 Calle Fitness, Ciudad</p>
-          </div>
-          <div class="footer-section">
-            <h3>Suscribete</h3>
-            <p>Suscríbete para recibir noticias y ofertas.</p>
-            <form class="newsletter-form">
-              <input type="email" placeholder="Tu email" required>
-              <button type="submit">Suscribirse</button>
-            </form>
-            <h3>Síguenos</h3>
-            <div class="social-links">
-              <a href="https://facebook.com" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
-              <a href="https://instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
-              <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
-              <a href="https://twitter.com" target="_blank"><i class='bx bxl-spotify'></i></a>
+    <!-- Footer -->
+      <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Columna Mapa -->
+            <div class="footer-column footer-map">
+                <h3>Nuestra Ubicación</h3>
+                <!-- Mapa de la plaza Belgrano en Jujuy por defecto -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14552.016335198424!2d-65.31139455!3d-24.193003650000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f44bc191aab%3A0x6bfa5cc1fa7d82cc!2sPlaza%20Belgrano!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+                    allowfullscreen="" loading="lazy">
+                </iframe>
             </div>
-          </div>
+
+            <!-- Columna Contacto -->
+            <div class="footer-column footer-contact">
+                <h3>Contáctanos</h3>
+                <p><i class="fas fa-phone-alt"></i> +54 388 422 1234</p>
+                <p><i class="fas fa-envelope"></i> consultas@jujuytour.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> San Martín 200, S.S. de Jujuy</p>
+            </div>
+
+            <!-- Columna Redes Sociales -->
+            <div class="footer-column footer-social">
+                <h3>Síguenos</h3>
+                <p>Mantenete al día con los próximos eventos y mejores fechas para visitarnos.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Columna Newsletter -->
+            <div class="footer-column footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Suscribite a nuestras promociones de viajes e información clave.</p>
+                <form action="#" class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required aria-label="Correo de suscripción">
+                    <button type="submit" aria-label="Suscribirse"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
         </div>
+
         <div class="footer-bottom">
-          <p>© 2025. Todos los derechos reservados.</p>
+            <p>&copy; 2026 JujuyTour. Todos los derechos reservados. Desarrollado para vivir Jujuy.</p>
         </div>
-      </footer>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>

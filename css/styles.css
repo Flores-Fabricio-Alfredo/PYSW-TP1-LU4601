@@ -15,34 +15,41 @@ body {
 :root {
     --bg-color: #f0f0f0;
     --text-color: #333;
-    --nav-bg: #070d1f;
-    --link-hover: #177940;
-    --mega-bg: #070d1f;
+    --nav-bg: #15100B;
+    --link-hover: #D35400; /* Jujuy Terracotta */
+    --link-secondary: #27AE60; /* Yungas Green */
+    --mega-bg: #0C0806;
     --mega-text: #d9d9d9;
     --card-bg: #fff;
     --card-shadow: rgba(0, 0, 0, 0.1);
-    --card-text: #666;
-    --section-bg: #f9f9f9;
+    --card-text: #555;
+    --section-bg: #faf9f7;
+    --border-mega-menu: #e65100;
+
+    /* Focus Accessible */
+    --focus-outline: 3px solid #D35400;
 }
 
 [data-theme="dark"] {
-    --bg-color: #1a1a1a;
-    --text-color: #fff;
-    --nav-bg: #121212;
-    --link-hover: #2ecc71;
-    --mega-bg: #121212;
+    --bg-color: #1a1512;
+    --text-color: #f4efea;
+    --nav-bg: #110d0a;
+    --link-hover: #FF7043;
+    --link-secondary: #2ECC71;
+    --mega-bg: #110d0a;
     --mega-text: #ccc;
-    --card-bg: #2a2a2a;
-    --card-shadow: rgba(255, 255, 255, 0.1);
-    --card-text: #ccc;
-    --section-bg: #222;
+    --card-bg: #292421;
+    --card-shadow: rgba(255, 112, 67, 0.15);
+    --card-text: #c4beb9;
+    --section-bg: #211c19;
+    --border-mega-menu: #FF7043;
 }
 
 /* Header y navegación */
 nav {
     position: fixed;
     width: 100%;
-    background-color: var(--nav-bg);
+    background-color: var(--nav-bg); /* color de la barra de navegación */
     z-index: 1000;
 }
 
@@ -299,143 +306,199 @@ nav {
     background: var(--section-bg);
 }
 
-.carousel {
-    overflow: hidden;
-    max-width: 1300px;
+.snap-carousel {
+    max-width: 1100px;
     margin: 0 auto;
+    position: relative;
+    padding-bottom: 20px; 
 }
 
-.carousel-inner {
+.snap-inline {
     display: flex;
-    width: calc(33.33% * 5); /* 5 ítems visibles */
-    animation: slide 15s infinite linear;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 30px;
+    padding: 10px 0 25px;
 }
 
-.testimonios-item {
-    min-width: 33.33%;
-    padding: 20px;
+.snap-inline::-webkit-scrollbar {
+    height: 8px;
+}
+.snap-inline::-webkit-scrollbar-track {
+    background: var(--card-bg);
+    border-radius: 4px;
+}
+.snap-inline::-webkit-scrollbar-thumb {
+    background: var(--link-hover);
+    border-radius: 4px;
+}
+
+.snap-item {
+    scroll-snap-align: center;
+    min-width: 300px;
+    flex: 0 0 300px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 8px var(--card-shadow);
     text-align: center;
+    transition: transform 0.3s;
 }
 
-.testimonios-item img {
-    width: 70px;
-    height: 70px;
-    border-radius: 70%;
-    margin-bottom: 15px;
+.snap-item:hover {
+    transform: translateY(-5px);
+}
+
+.css-avatar {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: var(--bg);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .testimonios-item p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--card-text);
     margin-bottom: 10px;
+    line-height: 1.5;
 }
 
 .testimonios-item span {
     font-size: 0.9rem;
-    color: var(--text-color);
-    font-style: italic;
-}
-
-@keyframes slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    color: var(--link-hover);
+    font-weight: bold;
 }
 
 /* Footer */
-.footer {
-    background: var(--nav-bg);
-    color: #fff;
-    padding: 40px 30px;
+
+.main-footer {
+    background-color: var(--bg-header);
+    color: var(--text-header);
+    padding: 3rem 0 0 0;
+    margin-top: 4rem;
 }
 
-.footer-map {
-    margin-bottom: 30px;
-}
-
-.footer-content {
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem 2rem 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    max-width: 1300px;
-    margin: 0 auto 30px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
 }
 
-.footer-section h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+.footer-column h3 {
+    color: var(--text-header);
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid var(--border-mega-menu);
+    display: inline-block;
+    padding-bottom: 0.5rem;
 }
 
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section ul li a {
-    color: #ccc;
-    text-decoration: none;
-    font-size: 1rem;
-    line-height: 1.8;
-}
-
-.footer-section ul li a:hover {
-    color: #fff;
-}
-
-.footer-section p {
-    font-size: 1rem;
+.footer-column p {
+    color: var(--text-header);
+    opacity: 0.8;
     line-height: 1.6;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
+/* Contenedor del mapa */
+.footer-map iframe {
+    width: 100%;
+    height: 200px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Íconos sociales */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-header);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.social-icons a:hover {
+    background-color: var(--link-hover);
+    transform: translateY(-3px);
+}
+
+/* Formulario Newsletter */
 .newsletter-form {
     display: flex;
-    gap: 10px;
-    margin: 15px 0;
+    margin-top: 1rem;
 }
 
 .newsletter-form input {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
     flex: 1;
-    background: #fff; /* Claro por defecto */
-}
-
-[data-theme="dark"] .newsletter-form input {
-    background: #333; /* Oscuro */
-    color: #fff;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-family: inherit;
+    /* Inverso al del header para que resalte y se lea */
+    background-color: var(--text-header);
+    color: var(--bg-header);
 }
 
 .newsletter-form button {
-    padding: 10px 20px;
-    background: var(--link-hover);
-    color: #fff;
+    background-color: var(--link-hover);
+    color: white;
     border: none;
-    border-radius: 5px;
+    padding: 0 1.2rem;
+    border-radius: 0 4px 4px 0;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .newsletter-form button:hover {
-    background: #145c32;
+    background-color: var(--border-mega-menu);
+    opacity: 0.8;
 }
 
-.social-links {
-    display: flex;
-    gap: 15px;
-}
-
-.social-links img {
-    width: 30px;
-    height: 30px;
-}
-
+/* Footer Bottom (Copyright) */
 .footer-bottom {
     text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #ccc;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-bottom p {
+    color: var(--text-header);
+    opacity: 0.6;
     font-size: 0.9rem;
+    margin: 0;
+    justify-content: center;
 }
+
 
 /* Sección Galería de Clases */
 .clases-gallery {
@@ -495,7 +558,7 @@ nav {
     transition: transform 0.3s;
     display: none; /* Ocultamos todos por defecto */
 }
-
+/* Estilos para los elementos de la galería */
 .gallery-item.large {
     grid-column: span ;
     grid-row: span 1;
@@ -545,16 +608,13 @@ nav {
     font-weight: bold;
 }
 
-/* Filtrado */
+/* Filtrado CSS Puro */
 #all:checked ~ .gallery-container .gallery-item,
-#musculacion:checked ~ .gallery-container .musculacion,
-#powerlifting:checked ~ .gallery-container .powerlifting,
-#crossfit:checked ~ .gallery-container .crossfit,
-#calistenia:checked ~ .gallery-container .calistenia,
-#yoga:checked ~ .gallery-container .yoga,
-#pilates:checked ~ .gallery-container .pilates, 
-#zumba:checked ~ .gallery-container .zumba, 
-#spinning:checked ~ .gallery-container .spinning {
+#quebrada:checked ~ .gallery-container .quebrada,
+#valles:checked ~ .gallery-container .valles,
+#yungas:checked ~ .gallery-container .yungas,
+#puna:checked ~ .gallery-container .puna,
+#gastronomia:checked ~ .gallery-container .gastronomia {
     display: block;
 }
 
@@ -733,17 +793,21 @@ th {
 .skill-level {
     height: 100%;
     background: #177940;
-    width: 0;
+    /* La meta es definida inline ej: style="width: 90%" */
+}
+
+.card-entrenador:hover .skill-level {
     animation: fillBar 1.5s ease forwards;
-    animation-delay: 0.3s;
+    /* Retraso ligero para que dé tiempo a que la carta gire */
+    animation-delay: 0.2s;
 }
 
 @keyframes fillBar {
     from {
-        width: 0;
+        max-width: 0%;
     }
     to {
-        width: inherit;
+        max-width: 100%;
     }
 }
 
@@ -759,6 +823,73 @@ th {
 
 .rating .star.filled {
     color: #ffd700;
+}
+
+/* Sistema de rating con estrellas CSS-ONLY extraído de agencia */
+.star-rating {
+    font-size: 1.5rem;
+    color: #d3d3d3;
+    display: inline-flex;
+    flex-direction: row-reverse;
+}
+
+.star-rating>span {
+    color: #FFD700;
+    cursor: default;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.star-rating>span.empty {
+    color: #d3d3d3;
+}
+
+/* CSS-only hover effect for fun */
+.star-rating:hover>span.empty {
+    color: #FFD700;
+}
+
+.star-rating>span:hover~span {
+    color: rgba(255, 215, 0, 0.5);
+}
+
+/* Pop effect for stars when card is flipped (hovered) */
+.card-entrenador:hover .star-rating>span {
+    animation: starPop 0.5s ease forwards;
+}
+
+.card-entrenador:hover .star-rating>span:nth-child(5) {
+    animation-delay: 0.1s;
+}
+
+.card-entrenador:hover .star-rating>span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.card-entrenador:hover .star-rating>span:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.card-entrenador:hover .star-rating>span:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.card-entrenador:hover .star-rating>span:nth-child(1) {
+    animation-delay: 0.9s;
+}
+
+@keyframes starPop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* Información de contacto */
@@ -859,15 +990,15 @@ th {
     border-color: var(--link-hover);
 }
 
-/* Validación en tiempo real */
+/* Validación en tiempo real (Colores neutrales a pedido del usuario) */
 .form-group input:invalid,
 .form-group textarea:invalid {
-    border-color: #ff4d4d;
+    border-color: #ddd;
 }
 
 .form-group input:valid,
 .form-group textarea:valid {
-    border-color: #177940;
+    border-color: #ddd;
 }
 
 .form-group .error-message {
@@ -1103,24 +1234,24 @@ th {
     margin-bottom: 20px;
 }
 
-/* Mostrar precios según el estado del toggle */
-.toggle-container .monthly-price,
-.toggle-container .period.monthly {
+/* Mostrar precios según el estado del toggle (Controlado por JS classes) */
+.pricing-table.monthly .annual-price,
+.pricing-table.monthly .period.annual {
+    display: none;
+}
+
+.pricing-table.monthly .monthly-price,
+.pricing-table.monthly .period.monthly {
     display: inline;
 }
 
-.toggle-container .annual-price,
-.toggle-container .period.annual {
+.pricing-table.annual .monthly-price,
+.pricing-table.annual .period.monthly {
     display: none;
 }
 
-#plan-toggle:checked ~ .pricing-table .monthly-price,
-#plan-toggle:checked ~ .pricing-table .period.monthly {
-    display: none;
-}
-
-#plan-toggle:checked ~ .pricing-table .annual-price,
-#plan-toggle:checked ~ .pricing-table .period.annual {
+.pricing-table.annual .annual-price,
+.pricing-table.annual .period.annual {
     display: inline;
 }
 
@@ -1259,13 +1390,19 @@ th {
 .blog-post:nth-child(6) { animation-delay: 0.6s; }
 
 /* Filtrado */
-.filter-container #yoga:checked ~ .blog-grid .blog-post:not([data-tag="yoga"]),
-.filter-container #fitness:checked ~ .blog-grid .blog-post:not([data-tag="fitness"]),
-.filter-container #nutricion:checked ~ .blog-grid .blog-post:not([data-tag="nutricion"]),
-.filter-container #zumba:checked ~ .blog-grid .blog-post:not([data-tag="zumba"]),
-.filter-container #musculacion:checked ~ .blog-grid .blog-post:not([data-tag="musculacion"]),
-.filter-container #calistenia:checked ~ .blog-grid .blog-post:not([data-tag="calistenia"]) {
+.filter-container #cultura:checked ~ .blog-grid .blog-post:not([data-tag="cultura"]),
+.filter-container #naturaleza:checked ~ .blog-grid .blog-post:not([data-tag="naturaleza"]),
+.filter-container #gastronomia:checked ~ .blog-grid .blog-post:not([data-tag="gastronomia"]),
+.filter-container #aventura:checked ~ .blog-grid .blog-post:not([data-tag="aventura"]) {
     display: none;
+}
+
+@supports (animation-timeline: view()) {
+    .blog-post {
+        animation: reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 30%;
+    }
 }
 
 .filter-container #all:checked ~ .blog-grid .blog-post {
@@ -1453,12 +1590,45 @@ th {
         padding: 0 5px; /* Aún más centrado */
     }
 
-    table {
-        font-size: 0.8rem; /* Texto más pequeño en móviles */
+    table.responsive-table {
+        border: 0;
+        box-shadow: none;
+        min-width: 100%;
+        width: 100%;
     }
-
-    th, td {
-        padding: 6px; /* Padding más pequeño en móviles */
+    table.responsive-table thead {
+        display: none;
+    }
+    table.responsive-table tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid var(--table-border);
+        border-radius: 5px;
+        box-shadow: 0 4px 6px var(--card-shadow);
+        background: var(--card-bg);
+    }
+    table.responsive-table td {
+        display: block;
+        text-align: right;
+        font-size: 0.85rem;
+        border: none;
+        border-bottom: 1px dashed var(--table-border);
+        position: relative;
+        padding-left: 50%;
+    }
+    table.responsive-table td:last-child {
+        border-bottom: 0;
+    }
+    table.responsive-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: var(--link-hover);
     }
 
     .horarios-title {

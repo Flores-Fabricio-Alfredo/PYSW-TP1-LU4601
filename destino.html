@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos - Turismo Jujuy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="envoltura">
+                <div class="logo"><a href="index.html">JujuyTour</a></div>
+                <div class="menu-icon"><i class="bx bx-menu"></i></div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li>
+                        <a href="destino.html">Destinos</a>
+                        <div class="mega-menu">
+                            <div class="contenedor">
+                                <div class="menu">
+                                    <p>Valles</p>
+                                    <ul class="mega-links">
+                                        <li><a href="destino.html">San Salvador</a></li>
+                                        <li><a href="destino.html">Yala</a></li>
+                                        <li><a href="destino.html">Termas de Reyes</a></li>
+                                        <li><a href="destino.html">El Carmen</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu">
+                                    <p>Quebrada</p>
+                                    <ul class="mega-links">
+                                        <li><a href="destino.html">Purmamarca</a></li>
+                                        <li><a href="destino.html">Maimará</a></li>
+                                        <li><a href="destino.html">Tilcara</a></li>
+                                        <li><a href="destino.html">Humahuaca</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu">
+                                    <p>Otras Regiones</p>
+                                    <ul class="mega-links">
+                                        <li><a href="destino.html">Yungas (Calilegua)</a></li>
+                                        <li><a href="destino.html">Puna (Salinas Grandes)</a></li>
+                                        <li><a href="destino.html">Susques</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu">
+                                    <img src="img/carnaval1.jfif" alt="Carnaval Jujuy">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="agencia.html">Agencias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="subcripcion.html">Paquetes</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <button class="toggle-btn" aria-label="Cambiar Modo Claro/Oscuro"><i class="bx bx-sun"
+                        id="theme-icon"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="clases-gallery dest-gallery-padding">
+        <h1 class="gallery-title">Galería de Destinos y Sabores</h1>
+        <p style="margin-bottom:20px; color:var(--card-text);">Descubrí los destinos más hermosos de Jujuy</p>
+
+        <div class="gallery-wrapper">
+            <!-- Filtros CSS Puros (:checked) -->
+            <input type="radio" name="filter" id="all" checked>
+            <label for="all" class="filter-btn">Todos</label>
+
+            <input type="radio" name="filter" id="quebrada">
+            <label for="quebrada" class="filter-btn">Quebrada</label>
+
+            <input type="radio" name="filter" id="valles">
+            <label for="valles" class="filter-btn">Valles</label>
+
+            <input type="radio" name="filter" id="yungas">
+            <label for="yungas" class="filter-btn">Yungas</label>
+
+            <input type="radio" name="filter" id="puna">
+            <label for="puna" class="filter-btn">Puna</label>
+
+            <!-- Nuevo filtro para comida solicitada por el usuario -->
+            <input type="radio" name="filter" id="gastronomia">
+            <label for="gastronomia" class="filter-btn">Gastronomía</label>
+
+            <!-- Galería Masonry emulada con Grid spans -->
+            <div class="gallery-container">
+
+                <!-- ============== CARNAVAL (Quebrada) ============== -->
+                <div class="gallery-item quebrada large">
+                    <img src="img/carnaval1.jfif" alt="Carnaval">
+                    <div class="overlay"><span>Carnaval</span></div>
+                </div>
+                <div class="gallery-item quebrada medium">
+                    <img src="img/carnaval2.jfif" alt="Carnaval">
+                    <div class="overlay"><span>Comparsas</span></div>
+                </div>
+                <div class="gallery-item quebrada small">
+                    <img src="img/carnaval3.jfif" alt="Carnaval">
+                    <div class="overlay"><span>Tradición</span></div>
+                </div>
+                <div class="gallery-item quebrada large">
+                    <img src="img/carnaval4.jfif" alt="Carnaval">
+                    <div class="overlay"><span>Alegría Jujeña</span></div>
+                </div>
+                <div class="gallery-item quebrada medium">
+                    <img src="img/carnaval5.jfif" alt="Carnaval">
+                    <div class="overlay"><span>Diablos</span></div>
+                </div>
+                <div class="gallery-item quebrada small">
+                    <img src="img/carnaval6.jfif" alt="Carnaval">
+                    <div class="overlay"><span>Desentierro</span></div>
+                </div>
+
+                <!-- ============== GASTRONOMIA (c1 - c9) ============== -->
+                <div class="gallery-item gastronomia medium">
+                    <img src="img/c1.png" alt="Comida">
+                    <div class="overlay"><span>Emapanadas Jujeñas</span></div>
+                </div>
+                <div class="gallery-item gastronomia small">
+                    <img src="img/c2.png" alt="Comida">
+                    <div class="overlay"><span>Emapanadas Jujeñas</span></div>
+                </div>
+                <div class="gallery-item gastronomia large">
+                    <img src="img/c3.png" alt="Comida">
+                    <div class="overlay"><span>Comidas Jujeñas</span></div>
+                </div>
+                <div class="gallery-item gastronomia medium">
+                    <img src="img/c4.jpg" alt="Comida">
+                    <div class="overlay"><span>Carne de Llama</span></div>
+                </div>
+                <div class="gallery-item gastronomia small">
+                    <img src="img/c5.jpg" alt="Comida">
+                    <div class="overlay"><span>Tamales</span></div>
+                </div>
+                <div class="gallery-item gastronomia large">
+                    <img src="img/c6.jpg" alt="Comida">
+                    <div class="overlay"><span>Humitas</span></div>
+                </div>
+                <div class="gallery-item gastronomia medium">
+                    <img src="img/c7.jpg" alt="Comida">
+                    <div class="overlay"><span>Locro</span></div>
+                </div>
+                <div class="gallery-item gastronomia small">
+                    <img src="img/c8.jpg" alt="Comida">
+                    <div class="overlay"><span>Tortillas</span></div>
+                </div>
+                <div class="gallery-item gastronomia large">
+                    <img src="img/c9.jpg" alt="Comida">
+                    <div class="overlay"><span>Comidas Jujeñas</span></div>
+                </div>
+
+                <!-- ============== YUNGAS (FH1 - FH12) ============== -->
+                <div class="gallery-item yungas large">
+                    <img src="img/FH1.jpg" alt="Yungas">
+                    <div class="overlay"><span>Tradiciones</span></div>
+                </div>
+                <div class="gallery-item yungas medium">
+                    <img src="img/FH2.jpg" alt="Yungas">
+                    <div class="overlay"><span>Carnaval</span></div>
+                </div>
+                <div class="gallery-item yungas small">
+                    <img src="img/FH3.jpg" alt="Yungas">
+                    <div class="overlay"><span>Senderismo</span></div>
+                </div>
+                <div class="gallery-item yungas medium">
+                    <img src="img/FH4.jpg" alt="Yungas">
+                    <div class="overlay"><span>Lugares unicos</span></div>
+                </div>
+                <div class="gallery-item yungas large">
+                    <img src="img/FH5.jpg" alt="Yungas">
+                    <div class="overlay"><span>Naturaleza viva</span></div>
+                </div>
+                <div class="gallery-item yungas small">
+                    <img src="img/FH6.jpg" alt="Yungas">
+                    <div class="overlay"><span>Tren Solar</span></div>
+                </div>
+                <div class="gallery-item yungas medium">
+                    <img src="img/FH7.jpg" alt="Yungas">
+                    <div class="overlay"><span>Salinas</span></div>
+                </div>
+                <div class="gallery-item yungas large">
+                    <img src="img/FH8.jpg" alt="Yungas">
+                    <div class="overlay"><span>Salinas</span></div>
+                </div>
+                <div class="gallery-item yungas small">
+                    <img src="img/FH9.jpg" alt="Yungas">
+                    <div class="overlay"><span>Yugas</span></div>
+                </div>
+                <div class="gallery-item yungas medium">
+                    <img src="img/FH10.jpg" alt="Yungas">
+                    <div class="overlay"><span>Yungas Profundas</span></div>
+                </div>
+                <div class="gallery-item yungas large">
+                    <img src="img/FH11.jpg" alt="Yungas">
+                    <div class="overlay"><span>Lugares unicos</span></div>
+                </div>
+                <div class="gallery-item yungas medium">
+                    <img src="img/FH12.jpg" alt="Yungas">
+                    <div class="overlay"><span>Lagunas de Yala</span></div>
+                </div>
+
+                <!-- ============== VALLES (FV1 - FV15) ============== -->
+                <div class="gallery-item valles large">
+                    <img src="img/FV1.jpg" alt="Valles">
+                    <div class="overlay"><span>Naturaleza viva</span></div>
+                </div>
+                <div class="gallery-item valles medium">
+                    <img src="img/FV2.jpg" alt="Valles">
+                    <div class="overlay"><span>Llamas</span></div>
+                </div>
+                <div class="gallery-item valles small">
+                    <img src="img/FV3.jpg" alt="Valles">
+                    <div class="overlay"><span>Lugares unicos</span></div>
+                </div>
+                <div class="gallery-item valles large">
+                    <img src="img/FV4.jpg" alt="Valles">
+                    <div class="overlay"><span>Lugares magicos</span></div>
+                </div>
+                <div class="gallery-item valles medium">
+                    <img src="img/FV5.jpg" alt="Valles">
+                    <div class="overlay"><span>Naturaleza viva</span></div>
+                </div>
+                <div class="gallery-item valles small">
+                    <img src="img/FV6.jpg" alt="Valles">
+                    <div class="overlay"><span>Cabalgatas</span></div>
+                </div>
+                <div class="gallery-item valles large">
+                    <img src="img/FV7.jpg" alt="Valles">
+                    <div class="overlay"><span>Lugares unicos</span></div>
+                </div>
+                <div class="gallery-item valles medium">
+                    <img src="img/FV8.jpg" alt="Valles">
+                    <div class="overlay"><span>Puna</span></div>
+                </div>
+                <div class="gallery-item valles small">
+                    <img src="img/FV9.jpg" alt="Valles">
+                    <div class="overlay"><span>Norte Vivo</span></div>
+                </div>
+                <div class="gallery-item valles large">
+                    <img src="img/FV10.jpg" alt="Valles">
+                    <div class="overlay"><span>Hornocal</span></div>
+                </div>
+                <div class="gallery-item valles medium">
+                    <img src="img/FV11.jpg" alt="Valles">
+                    <div class="overlay"><span>Natural</span></div>
+                </div>
+                <div class="gallery-item valles small">
+                    <img src="img/FV12.jpg" alt="Valles">
+                    <div class="overlay"><span>Hornocal</span></div>
+                </div>
+                <div class="gallery-item valles large">
+                    <img src="img/FV13.jpg" alt="Valles">
+                    <div class="overlay"><span>caminos</span></div>
+                </div>
+                <div class="gallery-item valles medium">
+                    <img src="img/FV14.jpg" alt="Valles">
+                    <div class="overlay"><span>Pueblos unicos</span></div>
+                </div>
+                <div class="gallery-item valles small">
+                    <img src="img/FV15.jpg" alt="Valles">
+                    <div class="overlay"><span>Tranquilidad</span></div>
+                </div>
+
+                <!-- ============== PUNA (p1 - p10) ============== -->
+                <div class="gallery-item puna large">
+                    <img src="img/p1.jpg" alt="Puna">
+                    <div class="overlay"><span>caminos unicos</span></div>
+                </div>
+                <div class="gallery-item puna medium">
+                    <img src="img/p2.jpg" alt="Puna">
+                    <div class="overlay"><span>naturaleza viva</span></div>
+                </div>
+                <div class="gallery-item puna small">
+                    <img src="img/p3.jpg" alt="Puna">
+                    <div class="overlay"><span>Purmamarca</span></div>
+                </div>
+                <div class="gallery-item puna large">
+                    <img src="img/p4.png" alt="Puna">
+                    <div class="overlay"><span>Piletones de sal</span></div>
+                </div>
+                <div class="gallery-item puna medium">
+                    <img src="img/p5.jpg" alt="Puna">
+                    <div class="overlay"><span>Pucara Tilcara</span></div>
+                </div>
+                <div class="gallery-item puna small">
+                    <img src="img/p6.jpg" alt="Puna">
+                    <div class="overlay"><span>Pucara Tilcara</span></div>
+                </div>
+                <div class="gallery-item puna large">
+                    <img src="img/p7.jpg" alt="Puna">
+                    <div class="overlay"><span>Naturaleza viva</span></div>
+                </div>
+                <div class="gallery-item puna medium">
+                    <img src="img/p8.jpg" alt="Puna">
+                    <div class="overlay"><span>Pueblos milenarios</span></div>
+                </div>
+                <div class="gallery-item puna small">
+                    <img src="img/p9.jpg" alt="Puna">
+                    <div class="overlay"><span>Salinas grandes</span></div>
+                </div>
+                <div class="gallery-item puna large">
+                    <img src="img/p10.jpg" alt="Puna">
+                    <div class="overlay"><span>Diques</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabla Responsiva de Precios/Excursiones -->
+    <div style="background: var(--bg-color);">
+        <section class="horarios padding-table">
+            <h2 class="horarios-title">Tarifas de Excursiones Base</h2>
+            <div class="table-container rt-container">
+                <table class="responsive-table">
+                    <thead>
+                        <tr>
+                            <th>Destino</th>
+                            <th>Tipo de Viaje</th>
+                            <th>Duración</th>
+                            <th>Dificultad</th>
+                            <th>Transporte</th>
+                            <th>Guía Incluido</th>
+                            <th>Precio Est.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Destino">Purmamarca y Salinas</td>
+                            <td data-label="Tipo">Full Day</td>
+                            <td data-label="Duración">12 Horas</td>
+                            <td data-label="Dificultad">Baja</td>
+                            <td data-label="Transporte">Minibus</td>
+                            <td data-label="Guía">Sí</td>
+                            <td data-label="Precio">$45.000</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Destino">Quebrada de Humahuaca</td>
+                            <td data-label="Tipo">Cultural</td>
+                            <td data-label="Duración">10 Horas</td>
+                            <td data-label="Dificultad">Baja</td>
+                            <td data-label="Transporte">Bus</td>
+                            <td data-label="Guía">Sí</td>
+                            <td data-label="Precio">$35.000</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Destino">Parque Nacional Calilegua</td>
+                            <td data-label="Tipo">Naturaleza</td>
+                            <td data-label="Duración">14 Horas</td>
+                            <td data-label="Dificultad">Media</td>
+                            <td data-label="Transporte">4x4</td>
+                            <td data-label="Guía">Sí</td>
+                            <td data-label="Precio">$60.000</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Destino">Serranía del Hornocal</td>
+                            <td data-label="Tipo">Aventura</td>
+                            <td data-label="Duración">8 Horas</td>
+                            <td data-label="Dificultad">Alta (Altura)</td>
+                            <td data-label="Transporte">Camioneta 4x4</td>
+                            <td data-label="Guía">Sí</td>
+                            <td data-label="Precio">$40.000</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Destino">Pucará de Tilcara</td>
+                            <td data-label="Tipo">Arqueológico</td>
+                            <td data-label="Duración">Medio Día</td>
+                            <td data-label="Dificultad">Baja</td>
+                            <td data-label="Transporte">Minibus</td>
+                            <td data-label="Guía">No</td>
+                            <td data-label="Precio">$25.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Columna Mapa -->
+            <div class="footer-column footer-map">
+                <h3>Nuestra Ubicación</h3>
+                <!-- Mapa de la plaza Belgrano en Jujuy -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14552.016335198424!2d-65.31139455!3d-24.193003650000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f44bc191aab%3A0x6bfa5cc1fa7d82cc!2sPlaza%20Belgrano!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+
+            <!-- Columna Contacto -->
+            <div class="footer-column footer-contact">
+                <h3>Contáctanos</h3>
+                <p><i class="fas fa-phone-alt"></i> +54 388 422 1234</p>
+                <p><i class="fas fa-envelope"></i> consultas@jujuytour.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> San Martín 200, S.S. de Jujuy</p>
+            </div>
+
+            <!-- Columna Redes Sociales -->
+            <div class="footer-column footer-social">
+                <h3>Síguenos</h3>
+                <p>Mantenete al día con los próximos eventos y mejores fechas para visitarnos.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Columna Newsletter -->
+            <div class="footer-column footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Suscribite a nuestras promociones de viajes e información clave.</p>
+                <form action="#" class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required aria-label="Correo de suscripción">
+                    <button type="submit" aria-label="Suscribirse"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 JujuyTour. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
