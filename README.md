@@ -17,9 +17,9 @@ Puedes visitar el proyecto funcionando de manera pública a través de GitHub Pa
 La plataforma ha sido construida como una aplicación web multipágina (MPA) tradicional, lo que asegura un fácil indexado SEO y un ruteo nativo por parte del navegador. 
 
 **Tecnologías Base:**
-- **HTML5 Semántico:** Uso de etiquetas modernas (`<header>`, `<nav>`, `<section>`, `<article>`, `<footer>`) para mejorar la accesibilidad (a11y) y el SEO.
+- **HTML5 Semántico:** Uso de etiquetas modernas (`<header>`, `<nav>`, `<section>`, `<article>`, `<footer>`) para mejorar la accesibilidad.
 - **CSS3 Vanilla:** Implementación de estilos sin preprocesadores. Se utilizaron técnicas modernas como Flexbox, CSS Grid, Custom Properties (Variables CSS) y CSS Scroll Snap.
-- **JavaScript Moderno (ES6+):** Utilizado de manera modular para interacciones DOM específicas (sin frameworks pesados como React o Angular), asegurando una carga ultra rápida y alta performance.
+- **JavaScript Moderno :** Utilizado de manera modular para interacciones DOM específicas, asegurando una carga ultra rápida y alta performance.
 
 ### Estructura de Archivos
 ```text
